@@ -10,7 +10,6 @@ namespace GreedisGood
         [Test()]
         public void ShouldBeWorthless()
         {
-
             Assert.AreEqual(0, Kata.Score(new int[] { 2, 3, 4, 6, 2 }));
         }
     }
