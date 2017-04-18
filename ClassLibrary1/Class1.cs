@@ -24,7 +24,7 @@ namespace ClassLibrary1
             var num = 0;
             foreach (var item in group)
             {
-                if (item.Count >= 3)
+                if (item.Count >= 3 && item.Key != 1)
                 {
                     num += item.Key * 100;
                 }
