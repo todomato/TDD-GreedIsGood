@@ -19,33 +19,33 @@ namespace ClassLibrary1
 
         public static int Score(int[] ary)
         {
-            var group = ary.GroupBy(c => c);
+            var group = ary.GroupBy(c => c).Select(c => new { Key = c.Key, Count = c.Count() });
 
-            var count = 0;
+            var num = 0;
             foreach (var item in group)
             {
-                if (item.Count() > 3)
+                if (item.Count >= 3)
                 {
-                    count += item.Key * 100;
+                    num += item.Key * 100;
                 }
 
-                if (item.Count() > 3 && item.Key == 1)
+                if (item.Count >= 3 && item.Key == 1)
                 {
-                    count += item.Key * 1000;
+                    num += item.Key * 1000;
                 }
 
-                if (item.Count() % 3 > 0 && item.Key == 1)
+                if (item.Count % 3 > 0 && item.Key == 1)
                 {
-                    count += item.Key * 100;
+                    num += item.Key * 100;
                 }
 
-                if (item.Count() % 3 > 0 && item.Key == 5)
+                if (item.Count % 3 > 0 && item.Key == 5)
                 {
-                    count += item.Key * 10;
+                    num += item.Key * 10;
                 }
             }
 
-            return count;
+            return num;
         }
     }
 }
