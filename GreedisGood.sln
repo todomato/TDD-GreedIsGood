@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreedisGood", "GreedisGood\GreedisGood.csproj", "{3DFCE954-2100-4EF0-84F8-CD77105AAF53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{B7CEE1B4-7E63-43C8-855D-4F50C3D7E49C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C98FAC2B-15A9-4FA7-8DD3-3C7E26C6783D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DFCE954-2100-4EF0-84F8-CD77105AAF53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DFCE954-2100-4EF0-84F8-CD77105AAF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DFCE954-2100-4EF0-84F8-CD77105AAF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DFCE954-2100-4EF0-84F8-CD77105AAF53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7CEE1B4-7E63-43C8-855D-4F50C3D7E49C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7CEE1B4-7E63-43C8-855D-4F50C3D7E49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7CEE1B4-7E63-43C8-855D-4F50C3D7E49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7CEE1B4-7E63-43C8-855D-4F50C3D7E49C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
