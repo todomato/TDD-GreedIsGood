@@ -28,20 +28,14 @@ namespace ClassLibrary1
                 {
                     num += item.Key * 100;
                 }
-
-                if (item.Count >= 3 && item.Key == 1)
+                if (item.Key == 1)
                 {
-                    num += item.Key * 1000;
-                }
-
-                if (item.Count % 3 > 0 && item.Key == 1)
-                {
-                    num += item.Key * item.Count % 3 * 100;
+                    num += (item.Count / 3) * 1000 + item.Count % 3 * 100;
                 }
 
                 if (item.Count % 3 > 0 && item.Key == 5)
                 {
-                    num += item.Key * 10;
+                    num += (item.Count / 3) * 500 + item.Count % 3 * 50;
                 }
             }
 
