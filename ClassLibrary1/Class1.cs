@@ -1,40 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace ClassLibrary1
 {
     public class Kata
     {
-         //Three 1's => 1000 points
-         //Three 6's =>  600 points
-         //Three 5's =>  500 points
-         //Three 4's =>  400 points
-         //Three 3's =>  300 points
-         //Three 2's =>  200 points
-         //One   1   =>  100 points
-         //One   5   =>   50 point
+        //Three 1's => 1000 points
+        //Three 6's =>  600 points
+        //Three 5's =>  500 points
+        //Three 4's =>  400 points
+        //Three 3's =>  300 points
+        //Three 2's =>  200 points
+        //One   1   =>  100 points
+        //One   5   =>   50 point
 
         public static int Score(int[] ary)
         {
-            var group = ary.GroupBy(c => c).Select(c => new { Key = c.Key, Count = c.Count() });
+            var group = ary.GroupBy(c => c)
+                .Select(c => Calculate(c.Key, c.Count()))
+                .Sum();
 
-            var num = 0;
-            foreach (var item in group)
-            {
-                var count = item.Count;
-                var key = item.Key;
-
-                num = Calculate(num, count, key);
-            }
-
-            return num;
+            return group;
         }
 
-        private static int Calculate(int num, int count, int key)
+        private static int Calculate(int key, int count)
         {
+            var num = 0;
             if (count >= 3 && key != 1)
             {
                 num += key * 100;
@@ -50,7 +40,5 @@ namespace ClassLibrary1
             }
             return num;
         }
-
-
     }
 }
