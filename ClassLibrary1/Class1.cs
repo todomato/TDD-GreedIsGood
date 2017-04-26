@@ -24,21 +24,30 @@ namespace ClassLibrary1
             var num = 0;
             foreach (var item in group)
             {
-                if (item.Count >= 3 && item.Key != 1)
-                {
-                    num += item.Key * 100;
-                }
-                if (item.Key == 1)
-                {
-                    num += (item.Count / 3) * 1000 + item.Count % 3 * 100;
-                }
+                var count = item.Count;
+                var key = item.Key;
 
-                if (item.Count % 3 > 0 && item.Key == 5)
-                {
-                    num += (item.Count / 3) * 500 + item.Count % 3 * 50;
-                }
+                num = Calculate(num, count, key);
             }
 
+            return num;
+        }
+
+        private static int Calculate(int num, int count, int key)
+        {
+            if (count >= 3 && key != 1)
+            {
+                num += key * 100;
+            }
+            if (key == 1)
+            {
+                num += (count / 3) * 1000 + count % 3 * 100;
+            }
+
+            if (count % 3 > 0 && key == 5)
+            {
+                num += (count / 3) * 500 + count % 3 * 50;
+            }
             return num;
         }
 
