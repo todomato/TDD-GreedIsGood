@@ -28,7 +28,10 @@ namespace GreedisGood
         [Test]
         public static void ShouldValueMixedSets2()
         {
-            Assert.AreEqual(1200, Kata.Score(new int[] { 1, 1, 1, 1, 1 }), "Should be 450");
+            Assert.AreEqual(1200, Kata.Score(new int[] { 1, 1, 1, 1, 1 }), "Should be 1200");
         }
+
+        //      Expected: 250
+        //But was:  150
     }
 }

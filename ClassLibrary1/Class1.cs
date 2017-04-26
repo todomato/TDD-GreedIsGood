@@ -36,7 +36,7 @@ namespace ClassLibrary1
 
                 if (item.Count % 3 > 0 && item.Key == 1)
                 {
-                    num += item.Key * 100;
+                    num += item.Key * item.Count % 3 * 100;
                 }
 
                 if (item.Count % 3 > 0 && item.Key == 5)
@@ -47,5 +47,7 @@ namespace ClassLibrary1
 
             return num;
         }
+
+
     }
 }
